@@ -15,3 +15,5 @@ readableStream.on("data", (readChunk) => {
 });
 
 readableStream.on("end", () => out(readAll));
+
+readableStream.on("error", (error) => out("Error", error.message));
